@@ -22,7 +22,7 @@ const App = () => {
       <Switch>
         <PrivateRoute exact path="/" component={AllRoomsDashboard} />
         <Route path="/welcome" component={Landing} />
-        <Route path="/success" component={Success} />
+        <Route path="/success/:jwt" component={Success} />
         <PrivateRoute exact path="/onboarding" component={Onboarding} />
         <PrivateRoute path="/post/:id" component={Post} />
         <PrivateRoute path="/room/:id/page/:page" component={SingleRoomDashboard} />

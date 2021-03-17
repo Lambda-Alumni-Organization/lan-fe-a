@@ -10,7 +10,7 @@ const Landing = props => {
   const [fetching, setFetching] = useState(false);
     
   useEffect(() => {
-    if (localStorage.getItem('id')) {
+    if (localStorage.getItem('token')) {
       props.history.push('/');
     };
   }, []);

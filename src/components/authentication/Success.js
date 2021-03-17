@@ -1,10 +1,12 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
+import { useParams } from 'react-router';
 import { success } from '../../store/actions';
 import Loader from '../common/Loader';
 
 const Success = props => {
-  useEffect(() => props.success(props.history), []);
+  let { jwt } = useParams();
+  useEffect(() => props.success(props.history, jwt), []);
 
   return (
     <>
